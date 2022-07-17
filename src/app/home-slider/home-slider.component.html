@@ -1,46 +1,25 @@
-<ngb-carousel *ngIf="images">
-    <ng-template ngbSlide>
-        <div class="picsum-img-wrapper">
-            <div class="row">
-                <div class="col-6">
-                    <img [src]="images[0]" alt="Random first slide">
-                </div>
-                <div class="col-6">
-                    <img [src]="images[1]" alt="Random first slide">
-                </div>
-            </div>
+<div class="row">
+    <div class="col-6 d-none d-lg-block">
+        <img src="https://www.mauli-infotech.co.in/img/services/order1.jpg" alt="">
+    </div>
+    <div class="col-sm-12 col-md-6">
+        <div class="jumbotron d-none d-md-block d-lg-block" style="margin-top: 120px;">
+            <h1 class="display-4">Hello, world!</h1>
+            <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+            <hr class="my-4">
+            <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+            <p class="lead">
+              <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+            </p>
         </div>
-        <div class="carousel-caption">
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        <div class="jumbotron d-lg-none d-md-none mt-3 ms-3">
+            <h1 class="display-4">Hello, world!</h1>
+            <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+            <hr class="my-4">
+            <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+            <p class="lead">
+              <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+            </p>
         </div>
-    </ng-template>
-    <ng-template ngbSlide>
-        <div class="row">
-            <div class="col-6">
-                <img [src]="images[0]" alt="Random first slide">
-            </div>
-            <div class="col-6">
-                <img [src]="images[1]" alt="Random first slide">
-            </div>
-        </div>
-        <div class="carousel-caption">
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-    </ng-template>
-    <ng-template ngbSlide>
-        <div class="row">
-            <div class="col-6">
-                <img [src]="images[0]" alt="Random first slide">
-            </div>
-            <div class="col-6">
-                <img [src]="images[1]" alt="Random first slide">
-            </div>
-        </div>
-        <div class="carousel-caption">
-            <h3>Third slide label</h3>
-            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-        </div>
-    </ng-template>
-</ngb-carousel>
+    </div>
+</div>

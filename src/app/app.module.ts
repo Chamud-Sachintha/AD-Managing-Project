@@ -16,13 +16,15 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { HomeSliderComponent } from './home-slider/home-slider.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { LatestAdvertismentsComponent } from './latest-advertisments/latest-advertisments.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     HeaderComponent,
-    HomeSliderComponent
+    HomeSliderComponent,
+    LatestAdvertismentsComponent
   ],
   imports: [
     BrowserModule,
