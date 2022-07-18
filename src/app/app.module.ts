@@ -7,10 +7,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { LatestAdvertismentsComponent } from './latest-advertisments/latest-advertisments.component';
+import { AdsRoutingModule } from './modules/ads/ads-routing.module';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -39,7 +41,9 @@ import { MatInputModule } from '@angular/material/input';
     MatSidenavModule,
     FlexLayoutModule,
     CarouselModule,
-    MatInputModule
+    MatInputModule,
+    AdsRoutingModule,
+    MDBBootstrapModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
