@@ -26,6 +26,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 
 import { FindAdComponent } from './modules/ads/find-ad/find-ad.component';
+import { ShowFilterAdsComponent } from './modules/ads/show-filter-ads/show-filter-ads.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { FindAdComponent } from './modules/ads/find-ad/find-ad.component';
     HeaderComponent,
     HomeSliderComponent,
     LatestAdvertismentsComponent,
-    FindAdComponent
+    FindAdComponent,
+    ShowFilterAdsComponent
   ],
   imports: [
     BrowserModule,

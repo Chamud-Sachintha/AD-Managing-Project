@@ -2,14 +2,15 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { AdsRoutingModule } from './ads-routing.module';
-import { FindAdComponent } from './find-ad/find-ad.component';
 import { SharedModule } from '../shared/shared.module';
-import { ShowFilterAdsComponent } from './show-filter-ads/show-filter-ads.component';
+import { ShowSingleAdComponent } from './show-single-ad/show-single-ad.component';
 
 @NgModule({
   declarations: [
-    FindAdComponent,
-    ShowFilterAdsComponent
+    // FindAdComponent,
+    // ShowFilterAdsComponent
+  
+    ShowSingleAdComponent
   ],
   imports: [
     CommonModule,
