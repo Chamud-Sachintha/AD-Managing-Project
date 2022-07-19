@@ -20,7 +20,12 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { HomeSliderComponent } from './home-slider/home-slider.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { FormsModule } from '@angular/forms';
+
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+
+import { FindAdComponent } from './modules/ads/find-ad/find-ad.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +33,8 @@ import { MatInputModule } from '@angular/material/input';
     HomeComponent,
     HeaderComponent,
     HomeSliderComponent,
-    LatestAdvertismentsComponent
+    LatestAdvertismentsComponent,
+    FindAdComponent
   ],
   imports: [
     BrowserModule,
@@ -41,8 +47,10 @@ import { MatInputModule } from '@angular/material/input';
     MatSidenavModule,
     FlexLayoutModule,
     CarouselModule,
-    MatInputModule,
     AdsRoutingModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatInputModule,
     MDBBootstrapModule.forRoot()
   ],
   providers: [],
