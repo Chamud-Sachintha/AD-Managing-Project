@@ -21,7 +21,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { HomeSliderComponent } from './home-slider/home-slider.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
-import { FormsModule } from '@angular/forms';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -30,6 +30,7 @@ import { FindAdComponent } from './modules/ads/find-ad/find-ad.component';
 import { ShowFilterAdsComponent } from './modules/ads/show-filter-ads/show-filter-ads.component';
 import { ShowCategoryComponent } from './modules/ads/show-category/show-category.component';
 import { SignInComponent } from './modules/auth/sign-in/sign-in.component';
+import { SignUpComponent } from './modules/auth/sign-up/sign-up.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { SignInComponent } from './modules/auth/sign-in/sign-in.component';
     FindAdComponent,
     ShowFilterAdsComponent,
     ShowCategoryComponent,
-    SignInComponent
+    SignInComponent,
+    SignUpComponent
   ],
   imports: [
     BrowserModule,
@@ -57,6 +59,7 @@ import { SignInComponent } from './modules/auth/sign-in/sign-in.component';
     AdsRoutingModule,
     AuthRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     MatFormFieldModule,
     MatInputModule,
     MDBBootstrapModule.forRoot()

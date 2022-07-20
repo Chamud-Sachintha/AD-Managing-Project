@@ -2,22 +2,26 @@
     <div class="row d-flex justify-content-center" style="margin-top: 10%;">
         <div class="jumbotron text-center" style="width: 400px;">
             <div class="col-12">
-                <span style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-size: xx-large; color: blueviolet;">- Sign In -</span><br>
+                <span
+                    style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-size: xx-large; color: blueviolet;">-
+                    Sign In -</span><br>
                 <p class="mt-3"><em>This line rendered as italicized text.</em></p>
-                <mat-form-field appearance="outline" style="width: 100%;">
-                    <mat-label>Type Username Here</mat-label>
-                    <input matInput placeholder="nimal123@gmail.com">
-                    <mat-icon matSuffix>verified_user</mat-icon>
-                </mat-form-field>
+                <form action="" [formGroup]="signInForm" (ngSubmit)="onSignIn()">
+                    <mat-form-field appearance="outline" style="width: 100%;">
+                        <mat-label>Type Username Here</mat-label>
+                        <input matInput placeholder="nimal123@gmail.com" formControlName="userName">
+                        <mat-icon matSuffix>verified_user</mat-icon>
+                    </mat-form-field>
 
-                <mat-form-field appearance="outline" style="width: 100%;">
-                    <mat-label>Type Password Here</mat-label>
-                    <input type="password" matInput placeholder="**********">
-                    <mat-icon matSuffix>password</mat-icon>
-                </mat-form-field>
+                    <mat-form-field appearance="outline" style="width: 100%;">
+                        <mat-label>Type Password Here</mat-label>
+                        <input type="password" matInput placeholder="**********" formControlName="password">
+                        <mat-icon matSuffix>password</mat-icon>
+                    </mat-form-field>
 
-                <button mat-raised-button color="primary" class="mb-3">Log In</button><br>
-                <a href="">Doesn't Have Account ?</a>
+                    <button mat-raised-button color="primary" class="mb-3">Log In</button><br>
+                    <a href="" routerLink="/auth/sign-up">Doesn't Have Account ?</a>
+                </form>
             </div>
         </div>
     </div>
