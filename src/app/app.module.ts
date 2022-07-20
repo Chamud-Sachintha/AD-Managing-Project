@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { LatestAdvertismentsComponent } from './latest-advertisments/latest-advertisments.component';
 import { AdsRoutingModule } from './modules/ads/ads-routing.module';
+import { AuthRoutingModule } from './modules/auth/auth-routing.module';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
 
@@ -27,6 +28,8 @@ import { MatInputModule } from '@angular/material/input';
 
 import { FindAdComponent } from './modules/ads/find-ad/find-ad.component';
 import { ShowFilterAdsComponent } from './modules/ads/show-filter-ads/show-filter-ads.component';
+import { ShowCategoryComponent } from './modules/ads/show-category/show-category.component';
+import { SignInComponent } from './modules/auth/sign-in/sign-in.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +39,9 @@ import { ShowFilterAdsComponent } from './modules/ads/show-filter-ads/show-filte
     HomeSliderComponent,
     LatestAdvertismentsComponent,
     FindAdComponent,
-    ShowFilterAdsComponent
+    ShowFilterAdsComponent,
+    ShowCategoryComponent,
+    SignInComponent
   ],
   imports: [
     BrowserModule,
@@ -50,6 +55,7 @@ import { ShowFilterAdsComponent } from './modules/ads/show-filter-ads/show-filte
     FlexLayoutModule,
     CarouselModule,
     AdsRoutingModule,
+    AuthRoutingModule,
     FormsModule,
     MatFormFieldModule,
     MatInputModule,

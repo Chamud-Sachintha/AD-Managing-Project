@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FindAdComponent } from './find-ad/find-ad.component';
+import { ShowCategoryComponent } from './show-category/show-category.component';
 import { ShowSingleAdComponent } from './show-single-ad/show-single-ad.component';
 
 const routes: Routes = [
@@ -11,7 +12,11 @@ const routes: Routes = [
         path: 'all', component: FindAdComponent
       },
       {
-        path: 'single',
+        path: 'category/:catId',
+        component: ShowCategoryComponent
+      },
+      {
+        path: 'single-ad/:adId:',
         component: ShowSingleAdComponent
       }
     ]
