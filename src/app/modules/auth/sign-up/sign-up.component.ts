@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-sign-up',
@@ -16,10 +16,10 @@ export class SignUpComponent implements OnInit {
 
   registerFormCreate(){
     this.registrationForm = this.formBuilder.group({
-      firstName: [''],
-      lastName: [''],
-      emailAddress: [''],
-      password: ['']
+      firstName: ['', [Validators.required, Validators.pattern("^[a-z]|[A-Z]$")]],
+      lastName: ['', [Validators.required, Validators.pattern("[a-z]|[A-Z]")]],
+      emailAddress: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required, Validators.minLength(8)]]
     });
   }
 

@@ -12,6 +12,8 @@
                                 <input matInput placeholder="Nimal" formControlName="firstName">
                                 <mat-icon matSuffix>verified_user</mat-icon>
                             </mat-form-field>
+                            <mat-error style="margin-top: -15px; float: left;" *ngIf="registrationForm.controls['firstName'].touched && registrationForm.controls['firstName'].hasError('required')">First Name Is Required.</mat-error>
+                            <mat-error style="margin-top: -15px; float: left;" *ngIf="registrationForm.controls['firstName'].touched && registrationForm.controls['firstName'].hasError('pattern')">Please Enter Valid Name.</mat-error>
                         </div>
 
                         <div class="col-6">
@@ -20,6 +22,8 @@
                                 <input matInput placeholder="Perera" formControlName="lastName">
                                 <mat-icon matSuffix>verified_user</mat-icon>
                             </mat-form-field>
+                            <mat-error style="margin-top: -15px; float: left;" *ngIf="registrationForm.controls['lastName'].touched && registrationForm.controls['lastName'].hasError('required')">Last Name is Required.</mat-error>
+                            <mat-error style="margin-top: -15px; float: left;" *ngIf="registrationForm.controls['lastName'].touched && registrationForm.controls['lastName'].hasError('pattern')">Please Enter Valid Name.</mat-error>
                         </div>
 
                         <div class="col-12">
@@ -28,6 +32,8 @@
                                 <input matInput placeholder="nimal123@gmail.com" formControlName="emailAddress">
                                 <mat-icon matSuffix>email</mat-icon>
                             </mat-form-field>
+                            <mat-error style="margin-top: -15px; float: left;" *ngIf="registrationForm.controls['emailAddress'].touched && registrationForm.controls['emailAddress'].hasError('required')">Email Address is Required.</mat-error>
+                            <mat-error style="margin-top: -15px; float: left;" *ngIf="registrationForm.controls['emailAddress'].touched && registrationForm.controls['emailAddress'].hasError('email')">Please Enter Valid Email.</mat-error>
                         </div>
 
                         <div class="col-12">
@@ -36,6 +42,8 @@
                                 <input type="password" matInput placeholder="********" formControlName="password">
                                 <mat-icon matSuffix>password</mat-icon>
                             </mat-form-field>
+                            <mat-error  style="margin-top: -15px; float: left;" *ngIf="registrationForm.controls['password'].touched && registrationForm.controls['password'].hasError('required')">Password is Required.</mat-error>
+                            <mat-error  style="margin-top: -15px; float: left;" *ngIf="registrationForm.controls['password'].touched && registrationForm.controls['password'].hasError('minlength')">Password Should Be More Than 8 Characters</mat-error>
                         </div>
 
                         <div class="col-12">
@@ -45,7 +53,7 @@
                                 <mat-icon matSuffix>repeat</mat-icon>
                             </mat-form-field>
 
-                            <button mat-raised-button color="primary" class="mb-3">Register</button><br>
+                            <button mat-raised-button color="primary" class="mb-3" [disabled]="registrationForm.invalid">Register</button><br>
                             <a href="" routerLink="/auth/sign-in">Already Have an Account ?</a>
                         </div>
                     </div>
