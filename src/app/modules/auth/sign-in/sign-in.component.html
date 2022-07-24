@@ -12,15 +12,19 @@
                         <input matInput placeholder="nimal123@gmail.com" formControlName="userName">
                         <mat-icon matSuffix>verified_user</mat-icon>
                     </mat-form-field>
+                    <mat-error style="margin-top: -15px; float: left;" *ngIf="signInForm.controls['userName'].touched && signInForm.controls['userName'].hasError('required')">Username Is Required.</mat-error>
 
                     <mat-form-field appearance="outline" style="width: 100%;">
                         <mat-label>Type Password Here</mat-label>
                         <input type="password" matInput placeholder="**********" formControlName="password">
                         <mat-icon matSuffix>password</mat-icon>
                     </mat-form-field>
-
-                    <button mat-raised-button color="primary" class="mb-3">Log In</button><br>
-                    <a href="" routerLink="/auth/sign-up">Doesn't Have Account ?</a>
+                    <mat-error style="margin-top: -15px; float: left;" *ngIf="signInForm.controls['password'].touched && signInForm.controls['password'].hasError('required')">Password Is Required.</mat-error>
+                    
+                    <div class="col mt-2">
+                        <button mat-raised-button color="primary" class="mb-3" [disabled]="signInForm.invalid">Log In</button><br>
+                        <a href="" routerLink="/auth/sign-up">Doesn't Have Account ?</a>
+                    </div>
                 </form>
             </div>
         </div>

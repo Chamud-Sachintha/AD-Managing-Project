@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { HeaderComponent } from '../home/header/header.component';
 import { FindAdComponent } from './find-ad/find-ad.component';
 import { ShowCategoryComponent } from './show-category/show-category.component';
 import { ShowSingleAdComponent } from './show-single-ad/show-single-ad.component';
