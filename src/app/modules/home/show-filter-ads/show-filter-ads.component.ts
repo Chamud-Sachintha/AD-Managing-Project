@@ -34,7 +34,7 @@ export class ShowFilterAdsComponent implements OnInit {
     },
     nav: true
   }
-  
+
   ngOnInit(): void {
   }
 

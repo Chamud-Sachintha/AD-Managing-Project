@@ -4,7 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AdsRoutingModule } from './modules/ads/ads-routing.module';
 import { AuthRoutingModule } from './modules/auth/auth-routing.module';
 import { DashboardRoutingModule } from './modules/dashboard/dashboard-routing.module';
 
@@ -23,9 +22,6 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 
-import { FindAdComponent } from './modules/ads/find-ad/find-ad.component';
-import { ShowFilterAdsComponent } from './modules/ads/show-filter-ads/show-filter-ads.component';
-import { ShowCategoryComponent } from './modules/ads/show-category/show-category.component';
 import { SignInComponent } from './modules/auth/sign-in/sign-in.component';
 import { SignUpComponent } from './modules/auth/sign-up/sign-up.component';
 import { AdminHeaderComponent } from './modules/dashboard/admin-header/admin-header.component';
@@ -35,13 +31,17 @@ import { HomeBannerComponent } from './modules/home/home-banner/home-banner.comp
 import { LatestAdvertismentsComponent } from './modules/home/latest-advertisments/latest-advertisments.component';
 import { HeaderComponent } from './modules/home/header/header.component';
 import { WelcomePageComponent } from './modules/home/welcome-page/welcome-page.component';
+import { FindAdComponent } from './modules/home/find-ad/find-ad.component';
+import { ShowFilterAdsComponent } from './modules/home/show-filter-ads/show-filter-ads.component';
+import { HomeRoutingModule } from '../app/modules/home/home-routing.module';
+import { ShowCategoryComponent } from './modules/home/show-category/show-category.component';
+import { ShowSingleAdComponent } from './modules/home/show-single-ad/show-single-ad.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FindAdComponent,
     ShowFilterAdsComponent,
-    ShowCategoryComponent,
     SignInComponent,
     SignUpComponent,
     AdminHeaderComponent,
@@ -50,7 +50,9 @@ import { WelcomePageComponent } from './modules/home/welcome-page/welcome-page.c
     HomeBannerComponent,
     HeaderComponent,
     WelcomePageComponent,
-    LatestAdvertismentsComponent
+    LatestAdvertismentsComponent,
+    ShowCategoryComponent,
+    ShowSingleAdComponent
   ],
   imports: [
     BrowserModule,
@@ -63,8 +65,8 @@ import { WelcomePageComponent } from './modules/home/welcome-page/welcome-page.c
     MatSidenavModule,
     FlexLayoutModule,
     CarouselModule,
-    AdsRoutingModule,
     AuthRoutingModule,
+    HomeRoutingModule,
     DashboardRoutingModule,
     FormsModule,
     ReactiveFormsModule,
